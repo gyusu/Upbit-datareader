@@ -1,2 +1,12 @@
 # Upbit-datareader
-암호화폐 거래소 upbit 에서 가격정보를 가져와 csv파일로 저장하는 프로그램
+Inspired by [pandas-datareader]
+
+[pandas-datareader]: https://github.com/pydata/pandas-datareader
+
+Fetch price data from [Upbit] and save it to .csv file.
+
+[Upbit]: https://www.upbit.com
+
+Because it is unofficial API, attention is required not to cause malicious traffic to server. 
+
+still in progress..
