@@ -1,5 +1,6 @@
 import upbit_data_fetch
 import upbit_data_manipulation
+import upbit_index_generation
 import datetime
 
 # This is an example code
@@ -14,3 +15,9 @@ upbit_data_fetch.get_data_from_upbit(coins=['BTC'], count=10000, period=1, save_
 
 # clean up data, for 'BTC' coin which we have .csv file, from dir_name, to dir_name/cleaned
 upbit_data_manipulation.data_cleaning(['BTC'], dir_name, dir_name+'/cleaned')
+
+# generate indices and save it
+ig = upbit_index_generation.IndexGenerator(['BTC'], dir_name+'/cleaned')
+ig.drop_studies(['ad_oscillator'])
+ig.to_csv(dir_name+'/studies')
+
